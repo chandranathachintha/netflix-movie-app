@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #141414;
+  --light: #F3F3F3;
+  --dark: 	#686868;
+}
+.navbar{
+  background-color: var(--primary) ;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+/* image hover */
+.row a {
+  transition: transform .3s;  
+}
+.row a:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);  
+  transform: scale(1.4);
+}
+.movies {
+  margin-top: 120px;
+}
+.pop_heading{
+  margin-left: 50px;
+}
+.up_heading{
+  margin-left: 52px;
+  margin-top: 40px;
+}
+.res_heading{
+  margin-left: 52px;
+  margin-top: 100px;
+}
+.footer{
+  position: relative;
+  top: 63px;
+}
+.res_notFound{
+  margin:141px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 767px){
+  .search{
+    display:none ;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .image{
+    width: 82px;
   }
-  to {
-    transform: rotate(360deg);
+  .pop_heading{
+    margin-left: 25px;
+    font-size: 20px;
+    margin-top: -44px;
   }
+  .up_heading{
+    margin-left: 25px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .res_heading{
+    margin-left: 25px;
+    margin-top: 70px;
+    font-size: 20px;
+  }
+  .res_notFound{
+    margin:199px;
+  }
+  .gh{
+    display: flex;
+    justify-content: end;
+  }
+  .netflix-logo{
+    padding: 0px;
+    margin: 0px;
+    margin: -6px;
+    margin-top: -5px;
+    margin-right: -2px;
+  }
+  .nav_list{
+    display: none;
+  }
+  .searchInput{
+    
+    width: 134px;
+    height: 34px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .searchBtn{
+    height: 33px;
+    font-size: 13px;
+    margin-top: 10px;
+    width: 60px;
+    padding: 0px;
+  }
+  .p-4 {
+    padding: 0.3rem!important;
+    margin: 0px;
+    margin-top: 12px;
+}
+.footer{
+  position: relative;
+  top: 171px;
+}
 }

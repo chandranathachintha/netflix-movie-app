@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React,{createContext,useState} from 'react';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Movies from './components/Movies';
+import Search from './components/Search';
 
-function App() {
+export const store = createContext();
+const App = () => {
+  const [search, setSearch] = useState('');
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <store.Provider value={[search,setSearch]}>
+        <Header />
+        {
+          search.length > 0 ?<Search /> : <Movies /> 
+        }  
+        <Footer />
+      </store.Provider>
     </div>
   );
 }
